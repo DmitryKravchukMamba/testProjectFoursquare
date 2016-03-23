@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/venue_layout_id">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="eeee"
+                android:id="@+id/name_venue_id"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLayout"
+                android:layout_toStartOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:background="@drawable/rounded_layout_distance"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/name_venue_id"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="8000m"
+                    android:id="@+id/distance_id"
+                    android:textSize="15dp"
+                    android:layout_alignBottom="@+id/name_venue_id"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="7dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"></FrameLayout>
+    </LinearLayout>
+</LinearLayout>

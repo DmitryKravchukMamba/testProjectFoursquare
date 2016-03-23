@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/image_layout_id"
+            android:gravity="center">
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/background_image_id"
+                android:layout_centerInParent="true" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_photo_id"
+                android:layout_width="fill_parent"
+                android:layout_gravity="top"
+                android:layout_height="fill_parent"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:id="@+id/freelancerListProgressBarWrapper"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/progressBar"
+                    android:clickable="true"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerHorizontal="true" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/no_photo"
+                android:id="@+id/no_photo_id"
+                android:layout_centerInParent="true"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_venuse_id"
+            android:gravity="center">
+
+            <ImageView
+                android:background="@drawable/rating"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/rating_image_id"
+                android:layout_alignBottom="@+id/reting_id"
+                android:layout_toLeftOf="@+id/reting_id"
+                android:layout_toStartOf="@+id/reting_id"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/reting_id"
+                android:layout_below="@+id/name_venuse_id"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Pizza Maranelo"
+            android:id="@+id/name_venuse_id"
+            android:layout_below="@+id/image_layout_id"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/address_layout_id"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/name_venuse_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:background="@drawable/adress_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView4"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/address"
+                android:id="@+id/textView3"
+                android:layout_alignBottom="@+id/imageView4"
+                android:layout_toRightOf="@+id/imageView4"
+                android:layout_toEndOf="@+id/imageView4"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="пр. 50 лет ВЛКСМ, д.51, кв 210 "
+                android:id="@+id/address_text_id"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:textColor="#474747"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_layout_id"
+            android:layout_below="@+id/address_layout_id"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:background="@drawable/phone_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView5"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/phone"
+                android:id="@+id/textView4"
+                android:layout_alignBottom="@+id/imageView5"
+                android:layout_toRightOf="@+id/imageView5"
+                android:layout_toEndOf="@+id/imageView5"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="+38 063 997 0338"
+                android:id="@+id/phone_text_id"
+                android:textColor="#474747"
+                android:layout_alignTop="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/url_layout_id"
+            android:layout_below="@+id/phone_layout_id"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:background="@drawable/url_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView6"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/url"
+                android:id="@+id/textView5"
+                android:layout_alignBottom="@+id/imageView6"
+                android:layout_toRightOf="@+id/imageView6"
+                android:layout_toEndOf="@+id/imageView6"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="http://www.maranello.kharkov.ua/"
+                android:id="@+id/url_text_id"
+                android:textColor="#476cf4"
+                android:layout_alignTop="@+id/textView5"
+                android:layout_toRightOf="@+id/textView5"
+                android:layout_toEndOf="@+id/textView5"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_layout_id"
+            android:layout_below="@+id/url_layout_id"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:background="@drawable/clock"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView8"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/hour"
+                android:id="@+id/textView"
+                android:layout_alignBottom="@+id/imageView8"
+                android:layout_toRightOf="@+id/imageView8"
+                android:layout_toEndOf="@+id/imageView8"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="08:00-22:00"
+                android:id="@+id/hour_text_id"
+                android:textColor="#474747"
+                android:layout_alignTop="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_layout_id"
+            android:layout_below="@+id/hour_layout_id"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:background="@drawable/price"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView2"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/price"
+                android:id="@+id/textView6"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="08:00-22:00"
+                android:id="@+id/price_text_id"
+                android:textColor="#474747"
+                android:layout_alignTop="@+id/textView6"
+                android:layout_toRightOf="@+id/textView6"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_tips_id"
+            android:layout_width="fill_parent"
+            android:layout_gravity="top"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/frame_id" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/price_layout_id"
+            android:id="@+id/frame_id"
+            android:background="#c336ff"
+            android:layout_marginTop="10dp"></FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c336ff"
+            android:id="@+id/frame_header_id"
+            android:layout_below="@+id/image_layout_id"></FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

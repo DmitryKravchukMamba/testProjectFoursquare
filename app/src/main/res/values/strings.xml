@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pizza Place</string>
+    <string name="client_id">OGKNEJQHN03HDHSO1P21CPKL0HDP1LDQAF1JARC2U3ZMUK15</string>
+    <string name="client_secret">DWGOCVLQWU5LKHPHC24SST10U5C2DHK5P4ESYVI2FCVEN0JR</string>
+    <string name="api_key_for_map">AIzaSyAG7zK-1KBYuL57JOaAAppfaQqBEJzHWOI</string>
+    <string name="google_app_id">1086338961967</string>
+
+    <string name="check_internet_connection">Проверьте подключение к интернету или настройки GPS</string>
+    <string name="address">Адрес:</string>
+    <string name="phone">Телефон:</string>
+    <string name="url">Сайт</string>
+    <string name="hour">Время работы:</string>
+    <string name="price">Ценовая политика:</string>
+    <string name="new_york">Нью-Йорк</string>
+    <string name="i_am">Я</string>
+    <string name="no_photo">К сожалению это заведение не имеет фото</string>
+    <string name="plase_select_wifi">Пожалуйста проверьте подключение к интернету</string>
+    <string name="ok">Ок</string>
+//
+</resources>
