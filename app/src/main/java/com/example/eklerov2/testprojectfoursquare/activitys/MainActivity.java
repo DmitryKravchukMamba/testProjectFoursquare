@@ -149,6 +149,7 @@ TextView newYorkText;
             @Override
             public void onRefresh() {
                 isRefresh = true;
+                loading = true;
                 isRefreshLayout = true;
                 fetchMyPlaces();
 
@@ -170,7 +171,11 @@ TextView newYorkText;
             }
         }
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        fetсhVenuse(mLastLocation.getLatitude(), mLastLocation.getLongitude(), DEFAULT_OFFSET);
+        if(isNewYork){
+            fetсhVenuse(latitudeNewYork, longitudeNewYork, DEFAULT_OFFSET);
+        }else {
+            fetсhVenuse(mLastLocation.getLatitude(), mLastLocation.getLongitude(), DEFAULT_OFFSET);
+        }
     }
 
 
