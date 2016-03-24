@@ -14,6 +14,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -32,6 +33,7 @@ import com.example.eklerov2.testprojectfoursquare.Constants;
 import com.example.eklerov2.testprojectfoursquare.R;
 import com.example.eklerov2.testprojectfoursquare.adapters.VenuesListAdapter;
 import com.example.eklerov2.testprojectfoursquare.api.FoursquareAPI;
+import com.example.eklerov2.testprojectfoursquare.api.GetToken;
 import com.example.eklerov2.testprojectfoursquare.fragments.DetailVenueFragment;
 import com.example.eklerov2.testprojectfoursquare.models.venuemodel.Item_;
 import com.example.eklerov2.testprojectfoursquare.models.venuemodel.PlaceObject;
@@ -39,11 +41,13 @@ import com.example.eklerov2.testprojectfoursquare.models.venuemodel.PlaceObject;
 import com.example.eklerov2.testprojectfoursquare.utils.SortVenueList;
 import com.example.eklerov2.testprojectfoursquare.utils.Utils;
 
+import com.foursquare.android.nativeoauth.model.AccessTokenResponse;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import com.google.android.gms.location.LocationServices;
 
+import com.google.gson.JsonObject;
 import com.orhanobut.hawk.Hawk;
 
 
@@ -154,7 +158,6 @@ TextView newYorkText;
 
     }
 
-
     private void fetchMyPlaces() {
         turnGPSOn();
         pastVisiblesItems = 0;
@@ -245,6 +248,7 @@ TextView newYorkText;
         });
     }
 
+
     private void fetсhVenuse(double lat, double lon, int offset) {
         if (isRefreshLayout == false) {
             showProgress();
@@ -322,6 +326,9 @@ TextView newYorkText;
                                 Utils.roundLocation(mLastLocation.getLongitude()) != Utils.roundLocation(mOldLocation.getLongitude())) {
                             mOldLocation = mLastLocation;
                             isRefresh = true;
+                            isNewYork = true;
+                            loading = true;
+                            newYorkText.setText(getString(R.string.new_york));
                             fetсhVenuse(mLastLocation.getLatitude(), mLastLocation.getLongitude(), DEFAULT_OFFSET);
                         }
                     }

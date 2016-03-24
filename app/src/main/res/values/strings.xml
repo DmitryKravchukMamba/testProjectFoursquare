@@ -12,6 +12,7 @@
     <string name="hour">Время работы:</string>
     <string name="price">Ценовая политика:</string>
     <string name="new_york">Нью-Йорк</string>
+    <string name="loading">Загрузка...</string>
     <string name="i_am">Я</string>
     <string name="no_photo">К сожалению это заведение не имеет фото</string>
     <string name="plase_select_wifi">Пожалуйста проверьте подключение к интернету</string>
